@@ -1,7 +1,6 @@
-﻿using System;
+﻿using App1.Models;
 using Microsoft.AspNetCore.Mvc;
-
-using App1.Models;
+using System;
 
 namespace App1.Controllers
 {
@@ -19,7 +18,10 @@ namespace App1.Controllers
     [HttpGet]
     public IActionResult List()
     {
-      return Ok(ItemRepository.GetAll());
+      if (1 == 1)
+      {
+        return Ok(ItemRepository.GetAll());
+      }
     }
 
     [HttpGet("{id}")]
